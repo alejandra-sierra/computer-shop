@@ -1,4 +1,4 @@
-package org.factoriaf5;
+package org.factoriaf5.Computadora;
 
 public class Computadora {
     private  final String marca;

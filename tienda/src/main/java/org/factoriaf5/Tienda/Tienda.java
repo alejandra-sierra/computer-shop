@@ -1,4 +1,5 @@
-package org.factoriaf5;
+package org.factoriaf5.Tienda;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,25 +8,25 @@ public class Tienda {
     private final String nombreTienda;
     private final String propietario;
     private final String identificadorTributario;
-    private final List<Computadora> listaOrdenadores;
+    private final List<Computadora> listaComputadores;
 
     public Tienda(String nombreTienda, String propietario, String identificadorTributario) {
         this.nombreTienda = nombreTienda;
         this.propietario = propietario;
         this.identificadorTributario = identificadorTributario;
-        this.listaOrdenadores = new ArrayList<>();
+        this.listaComputadores = new ArrayList<>();
     }
 
-    public void agregarOrdenador(Computadora Computadora) {
-        listaOrdenadores.add(Computadora);
+    public void agregarComputador(Computadora Computadora) {
+        listaComputadores.add(Computadora);
     }
 
-    public void eliminarOrdenador(String marca) {
-        listaOrdenadores.removeIf(Computadora -> Computadora.getMarca().equalsIgnoreCase(marca));
+    public void eliminarComputador(String marca) {
+        listaComputadores.removeIf(Computadora -> Computadora.getMarca().equalsIgnoreCase(marca));
     }
 
-    public Computadora buscarOrdenador(String marca) {
-        for (Computadora Computadora : listaOrdenadores) {
+    public Computadora buscarComputador(String marca) {
+        for (Computadora Computadora : listaComputadores) {
             if (Computadora.getMarca().equalsIgnoreCase(marca)) {
                 return Computadora;
             }
@@ -33,8 +34,8 @@ public class Tienda {
         return null;
     }
 
-    public List<Computadora> listarOrdenadores() {
-        return new ArrayList<>(listaOrdenadores);
+    public List<Computadora> listarComputadores() {
+        return new ArrayList<>(listaComputadores);
     }
 
     @Override
@@ -43,7 +44,7 @@ public class Tienda {
                 "nombreTienda='" + nombreTienda + '\'' +
                 ", propietario='" + propietario + '\'' +
                 ", identificadorTributario='" + identificadorTributario + '\'' +
-                ", listaOrdenadores=" + listaOrdenadores +
+                ", listaComputadores=" + listaComputadores +
                 '}';
     }
 }

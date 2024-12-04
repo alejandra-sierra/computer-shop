@@ -2,9 +2,28 @@ package org.factoriaf5;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+
 
 public class TiendaTest {
 @Test
+
+public class TiendaTest {
+    @Test
+    public void testAgregarComputador() {
+        // ... previous code remains the same
+    }
+
+    @Test
+    public void testEliminarComputador() {
+        // ... previous code remains the same
+    }
+
+    @Test
+    public void testBuscarComputador() {
+        // ... previous code remains the same
+    }
+}
     public void testAgregarComputador() {
         Tienda tienda = new Tienda("TechStore", "Juan Pérez", "123456789");
         Computador pc = new Computador("Dell", 16, "Intel i7", "Windows 11", 1200.00);
